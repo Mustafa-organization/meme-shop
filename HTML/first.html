@@ -1,51 +1,47 @@
+
+
 <html>
+
 <head>
-<link rel="stylesheet" type="text/css" href="../CSS/first.css">
-
-
-<title>Meme-shop</title>
-
-
-
+<link rel="stylesheet" type="text/css" href="first.css">
+<meta charset="utf-8">
+<title>Memes-shop</title>
 </head>
-
 <body>
-<div class="header">
-<ul class="ull">
-<li>Kosár tartalma</li>
-<li>Fiókk</li>
-	<li>
-	 <input type="text" placeholder="Username" name="username">
-		</li>
-	<li>
-	<input type="password" placeholder="Password" name="password">
-	</li>
+<div class="fejlec">
+<img src="logo.jpg" alt="logo">
 
-	
-
+<div class="menu-jobb">
+<ul class="firstl">
+ <li class="dropdown">
+    <a class="fiok" href="javascript:void(0)" >Fiok</a>
+    <div class="dropdown-content">
+	<form>
+      <a href="#"><input type="text" id="name" name="name" placeholder="felhasználónév" required></a>
+      <a href="#"><input type="password" id="password" name="pwd" placeholder="jelszó" required></a>
+      <a href="#"><input type="submit" id="ok" name="ok" value="Bejelentkezés"></a>
+	  </form>
+    </div>
+  </li>
+  <li class="dropdown"><a href="#news">Kosar tartalma</a></li>
+  
 </ul>
-
-<img src="#" alt="logo" style="flaot:left;">
-
-<h1 class="cim">Memes-shop</h1>
 </div>
-<ul class="ull2">
-<div class="hmenu">
-<li><a href="#">Kezdõlap</a></li>
-<li><a href="#">Webshop</a></li>
-<li><a href="#">Boltjaink</a></li>
-<li><a href="#">Szállítás</a></li>
-<li>GY.I.K</li>
-	<li>
-	<a href="#">Munkamenet</a>
-	<a href="#">Értékelések</a>
-	</li>
+<h1 id="cim">Memes-shop</h1>
 </div>
 
-
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li >
+    <a href="javascript:void(0)" >Dropdown</a>
+    
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    
+  </li>
 </ul>
-
 
 </body>
-
 </html>
