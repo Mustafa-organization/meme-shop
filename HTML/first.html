@@ -3,6 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../CSS scripts/first.css">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Memes-shop</title>
 </head>
 <body>
@@ -38,8 +39,66 @@
   <li class="hmenuv"><a class="hmenut" href="#news">Szállítás</a></li>
   <li class="hmenuv"><a class="hmenut" href="#contact">Történetünk</a></li>
   <li class="hmenuv"><a class="hmenut" href="#about">Boltjaink</a></li>
+  <form> 
+  <input class="kereses" type="text" name="valuetosearch" placeholder="keresés">
+  </form>
 </ul>
 
+<ul class="vmenu">
+<li class="vmenuv"><a class="vmenut" href="#">Puskás polók</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Dank-polók</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Normie-farmer</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Normie-polók</a></li>
+
+</ul>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="datface.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+ <img src="2.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="3.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+</div>
+<br>
+<!--
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+-->
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
 
 </body>
 </html>
