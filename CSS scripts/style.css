@@ -17,13 +17,13 @@ padding-right : 10%;
 text-align: center;
 color: tomato;
 background-color: powderblue;
-border: 20px;
+border: 0%;
 font-size:500%;
-margin: 0px;
+margin: 0%;
 }
 .menu-jobb {
 float: right;
-margin-right: 100px;
+margin-right: 0px;
 overflow: hidden;
 display: inline-block;
 background-color: tomato;
@@ -41,7 +41,7 @@ li a.fiok {
     display: inline-block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 23% 16px;
     text-decoration: none;
 }
 
@@ -163,28 +163,18 @@ li.vmenuv {
     text-decoration: none;
 }
 
-.mySlides {
-	
-	display: none;
-	margin: 0;
-	padding: 0;
+img.mySlides {
 
-}
-img.mySlides {vertical-align: middle;
-vertical-align: top;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 50%;
-  position: relative;
-  margin: 0;
 float: right;
-border: 0;
-  
+
 }
 
-/* Caption text */
+.slideshow-container{
+
+ float: right;;
+
+}
+
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -206,13 +196,13 @@ border: 0;
 
 /* The dots/bullets/indicators */
 .dot {
-  height: 15px;
+  height: ;
   width: 15px;
   margin: 0 2px;
   background-color: #bbb;
   border-radius: 50%;
-  display: inline-block;
   transition: background-color 0.6s ease;
+  
 }
 
 .active {
