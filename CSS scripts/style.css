@@ -7,7 +7,7 @@ padding-right : 10%;
 }
 .fejlec {
 	
-	background-color: powderblue;
+	background-color: black;
 	width: 100%;
 	height: 15%;
 	
@@ -15,18 +15,17 @@ padding-right : 10%;
 
 #cim {
 text-align: center;
-color: tomato;
-background-color: powderblue;
+color: red;
 border: 0%;
 font-size:500%;
 margin: 0%;
 }
 .menu-jobb {
 float: right;
-margin-right: 0px;
+margin: 0%;
 overflow: hidden;
 display: inline-block;
-background-color: tomato;
+background-color: red;
 
 }
 ul.firstl {
@@ -41,7 +40,8 @@ li a.fiok {
     display: inline-block;
     color: black;
     text-align: center;
-    padding: 23% 16px;
+    padding-top: 23%;
+	
     text-decoration: none;
 }
 
@@ -57,7 +57,7 @@ li.dropdown {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: tomato;
+    background-color: red;
     width: 9.8%;
 	height: 10%;
     z-index: 1;
@@ -114,8 +114,9 @@ li a.hmenut:hover {
 .kereses{
 	
 	width: 20%;
-	margin-left: 20%;
+	margin-left: 2%;
 	margin-top: 0.8%;
+	border-radius: 25px;
 }
 ul.hmenu {
     list-style-type: none;
@@ -145,13 +146,13 @@ ul.vmenu {
     margin-top: 1%;
     padding: 0;
     width: 8.7%;
-    background-color: #f1f1f1;
+    background-color: #333;
 	overflow: hidden;
 }
 a.vmenut {
 	
 	display: block;
-	color: black;
+	color: white;
 
     padding: 14px 16px;
     text-decoration: none;
