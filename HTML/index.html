@@ -9,19 +9,22 @@
 </head>
 <body>
 
+
+
 <div class="fejlec">
 
 <ul id="login-ul">
 
    <li id="logo-li"><img id ="logo" src="facebook.jpg"alt="logo"></li>
    <li id = "search"> 
-   <form>
+  
   <input id="kereses" type="text" name="valuetosearch" placeholder="keresés">
-  </form>
+ 
   </li>
   
-     <li class="login-li"><button class="login-button" onclick="document.getElementById('id01').style.display='block'" >Bejelentkezes</button></li>
-   <li  class="login-li"><button>Kosar tartalma</button></li>
+     <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" >Bejelentkezés</button></li>
+   
+   <li  class="login-li"><button class="loginbutton">Kosar tartalma</button></li>
 
 
   </ul>
@@ -36,25 +39,26 @@
   
   <form class="modal-content animate" action="/login.php">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezárás">&times;</span>
       <img src="login.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
       <label for="uname"><b>Felhasznalonev</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Felhasználónév" name="uname" required>
 
       <label for="psw"><b>Jelszo</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Jelszó" name="psw" required>
         
-      <button type="submit">Bejelentkezes</button>
+      <button class="loginbutton"type="submit">Bejelentkezes</button>
+	 
       <label>
         <input type="checkbox" checked="checked" name="remember">Emlekezz ram</label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Jelszo <a href="#">visszaallitas</a></span>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Mégsem</button>
+      <span class="psw">Jelszo <a href="repassword.html">visszaallitas</a></span>
     </div>
   </form>
 </div>
@@ -114,6 +118,19 @@
   <span class="dot"></span> 
 </div>
 
+
+<div class = "hirlevel">
+
+<h2 id="hirlevelcim">Hírlevél</h2>
+
+ <label for="email"><b>E-mail</b></label>
+      <input type="text" placeholder="email" name="email" >
+
+	   <label for="név"><b>Név</b></label>
+      <input type="text" placeholder="név" name="név">
+</div>
+
+
 <ul class="hmenu">
 
   <li class="hmenuv"><a class="hmenut" href="#home">Elérhetõségeink</a></li>
@@ -148,6 +165,7 @@ function showSlides() {
 }
 </script>
 <script>
+
 // Get the modal
 var modal = document.getElementById('id01');
 
@@ -158,5 +176,8 @@ window.onclick = function(event) {
     }
 }
 </script>
+
+
+
 </body>
 </html>

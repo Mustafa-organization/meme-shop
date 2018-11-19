@@ -141,7 +141,8 @@ float: right;
 
 .slideshow-container{
 
- float: right;;
+ float: right;
+ padding-top: 1%;
 
 }
 
@@ -163,7 +164,7 @@ input[type=text], input[type=password] {
 
 
 
-button {
+.loginbutton {
     background-color: #333;
     color: white;
     padding: 14px 20px;
@@ -174,8 +175,17 @@ button {
 	border-radius: 25px;
 }
 
-button:hover {
+button.loginbutton:hover {
     opacity: 0.8;
+}
+.cancelbtn {
+	
+	background-color: white;
+	border-radius: 25px;
+	border: none;
+}
+button.cancelbtn:hover {
+	opacity: 0.8;
 }
 
 /* Extra styles for the cancel button */
@@ -190,7 +200,7 @@ button:hover {
     text-align: center;
     margin: 24px 0 12px 0;
     position: relative;
-	widht: 10%;
+
 	height: 30%;
 }
 
@@ -272,4 +282,21 @@ span.psw {
     }
 }
 
+.hirlevel {
+	
+	padding:1%;
+	
+	width:35%;
+	background-color: #333;
+	margin-bottom: 1%;
+	margin:auto;
+	margin-bottom: 1%;
+}
+#hirlevelcim {
+	margin: 0%;
+text-align: center;	
+border: 0%;
+	color: white;
+	
+}
 
