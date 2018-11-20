@@ -1,0 +1,205 @@
+
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="../CSS scripts/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memes-shop</title>
+</head>
+<body>
+
+
+
+<div class="fejlec">
+
+<ul id="login-ul">
+
+   <li id="logo-li"><img id ="logo" style="width:125%" src="logo.png"alt="logo"></li>
+   <li id = "search"> 
+  
+  <input id="kereses" type="text" name="valuetosearch" placeholder="keresés">
+ 
+  </li>
+  
+     <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" >Bejelentkezés</button></li>
+	 <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id02').style.display='block'">Regisztráció</button> </li>
+	<li  class="login-li"><button class="loginbutton">Kosar tartalma</button></li>
+
+
+  </ul>
+  
+  </div>
+<div class="content">
+
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/login.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezárás">&times;</span>
+      <img src="login.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Felhasznalonev</b></label>
+      <input type="text" placeholder="Felhasználónév" name="uname" required>
+
+      <label for="psw"><b>Jelszo</b></label>
+      <input type="password" placeholder="Jelszó" name="psw" required>
+        
+      <button class="loginbutton"type="submit">Bejelentkezes</button>
+	 
+      <label>
+        <input type="checkbox" checked="checked" name="remember">Emlekezz ram</label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Mégsem</button>
+      <span class="psw">Jelszo <a href="repassword.html">visszaallitas</a></span>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/register.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Bezárás">&times;</span>
+    </div>
+		<div class="container">
+		<label for="name"><b>Teljes név</b></label>
+		<input type="text" placeholder="teljes név" name="name" required>
+      <label for="uname"><b>Felhasznalonev</b></label>
+	  <input type="text" placeholder="Felhasználónév" name="uname" required>
+		<label for="psw"><b>Jelszo</b></label>
+      <input type="password" placeholder="Jelszó" name="psw" required>
+	  <!-- mégegyszer jelszo, hirlevel pipa , szállítási cím -->
+        
+      <button class="loginbutton"type="submit">Regisztráció</button>
+	 </div>
+
+  </form>
+</div>
+
+
+
+<ul class="hmenu">
+
+  <li class="hmenuv"><a class="hmenut" href="#home">Kezdolap</a></li>
+    <li class="hmenuv"><a class="hmenut" href="#about">A het ajanlatai</a></li>
+  <li class="hmenuv"><a class="hmenut" href="#news">Szallitas</a></li>
+  <li class="hmenuv"><a class="hmenut" href="#contact">Tortenetunk</a></li>
+  <li class="hmenuv"><a class="hmenut" href="#about">Boltjaink</a></li>
+    <li class="hmenuv"><a class="hmenut" href="#about">Blog</a></li>
+	
+</ul>
+
+<div class="slideshow-container">
+<div class="mySlides">
+  <img src="datface.jpg" style="width:50%" >
+  
+</div>
+
+<div class="mySlides">
+ <img src="2.jpg" style="width:50%;" >
+  
+</div>
+
+<div class="mySlides">
+  <img src="3.jpg" style="width:50%;">
+
+</div>
+
+</div>
+
+
+
+<ul class="vmenu">
+<form action="miket jelenitsen meg" method="elkudi a dolgokat">
+<li class="vmenuv"><a class="vmenut" href="#">Puskás polók</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Dank-polók</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Normie-farmer</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Normie-polók</a></li>
+</form>
+</ul>
+
+
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+
+<div class = "hirlevel">
+
+<h2 id="hirlevelcim">Hírlevél</h2>
+
+ <label for="email"><b>E-mail</b></label>
+      <input type="text" placeholder="email" name="email" >
+
+	   <label for="név"><b>Név</b></label>
+      <input type="text" placeholder="név" name="név">
+</div>
+
+
+<ul class="hmenu">
+
+  <li class="hmenuv"><a class="hmenut" href="#home">Elérhetõségeink</a></li>
+   <li class="hmenuv"><a class="hmenut" href="#home">facebook</a></li>
+  <li class="hmenuv"><a class="hmenut" href="#news">instagram</a></li>
+  <li class="hmenuv"><a class="hmenut" href="#contact">snapchat</a></li>
+  
+  
+</ul>
+
+</div >
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 1000); // Change image every 1 seconds
+}
+</script>
+<script>
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+</body>
+</html>
