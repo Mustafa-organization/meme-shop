@@ -24,4 +24,5 @@ while(($row =mysqli_fetch_array($result))!=null)
  
  $GLOBALS[]=$name;
  $GLOBALS[]=$basketcount;
+ include '../HTML/loginedindex.html';
 ?>
