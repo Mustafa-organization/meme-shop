@@ -1,4 +1,9 @@
-
+body {
+	position:fixed;
+	width:1900px;
+	
+	
+}
 .fejlec {
 	
 	
@@ -36,6 +41,8 @@ padding-left : 15%;
 padding-right : 15%;
 padding-top: 0.1%;
 
+
+
 }
 #logo-li{
 	
@@ -45,16 +52,13 @@ padding-top: 0.1%;
 	margin: 0%;
 	padding-top: 0.28%;
 	
-	
-	
 }
 
-
+#logo {
 	
-
-
-
-
+	width:100%;
+	
+}
 	
 ul.hmenu {
     list-style-type: none;
@@ -68,11 +72,6 @@ li.hmenuv {
     float: left;
 }
 
-
-
-li a.hmenut:hover {
-    background-color: #111;
-}
  a.hmenut {
 	
 	display: block;
@@ -129,6 +128,12 @@ a.vmenut {
     padding: 14px 16px;
     text-decoration: none;
 }
+
+li a.vmenut:hover {
+	
+	background-color: #111;
+	
+}
 li.vmenuv {
     display: block;
     color: #000;
@@ -146,7 +151,8 @@ float: right;
 
  float: right;
  padding-top: 1%;
-
+ padding-left: 0%;
+ 
 }
 
 
@@ -285,6 +291,8 @@ span.psw {
     }
 }
 
+
+
 .hirlevel {
 	
 	padding:1%;
@@ -293,7 +301,7 @@ span.psw {
 	background-color: #333;
 	margin-bottom: 1%;
 	margin:auto;
-	margin-bottom: 1%;
+	
 }
 #hirlevelcim {
 	margin: 0%;
