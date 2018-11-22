@@ -24,8 +24,8 @@
   </li>
   
      <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" >Bejelentkezés</button></li>
-   
-   <li  class="login-li"><button class="loginbutton">Kosar tartalma</button></li>
+	 <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id02').style.display='block'">Regisztráció</button> </li>
+	<li  class="login-li"><button class="loginbutton">Kosar tartalma</button></li>
 
 
   </ul>
@@ -38,7 +38,7 @@
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/login.php">
+  <form class="modal-content animate" action="/register.php">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezárás">&times;</span>
       <img src="login.png" alt="Avatar" class="avatar">
@@ -47,6 +47,7 @@
     <div class="container">
       <label for="uname"><b>Felhasznalonev</b></label>
       <input type="text" placeholder="Felhasználónév" name="uname" required>
+	
 
       <label for="psw"><b>Jelszo</b></label>
       <input type="password" placeholder="Jelszó" name="psw" required>
@@ -68,6 +69,34 @@
 
 
 
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/register.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Bezárás">&times;</span>
+      <img src="login.png" alt="Avatar" class="avatar">
+	</div>
+		<div class="container">
+		<label for="name"><b>Teljes név</b></label>
+		<input type="text" placeholder="teljes név" name="name" required>
+      <label for="uname"><b>Felhasznalonev</b></label>
+	  <input type="text" placeholder="Felhasználónév" name="nuname" required>
+		<label for="psw"><b>Jelszo</b></label>
+      <input type="password" placeholder="Jelszó" name="npsw" required>
+	  	<label for="psw"><b>Jelszo megint</b></label>
+      <input type="password" placeholder="Jelszó" name="pswa" required>
+	  <label><input type="checkbox" checked="checked" name="news"><b>Hírlevél</b></label>
+	  <br>
+	  <label for="addressname"><b>Szállítási cím</b></label>
+	  <input type="text" placeholder="Szallitasi cim" name="addressname" style="width:50%;" required>
+	  <input type="number" placeholder="Házszám" name="addressnumber" style="width:10%; height:9.5%"required>
+		</div>
+	 <button class="loginbutton"type="submit">Regisztráció</button>
+	 </div>
+
+  </form>
+</div>
 
 
 
@@ -178,7 +207,18 @@ window.onclick = function(event) {
 }
 </script>
 
+<script>
 
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 </body>
 </html>
