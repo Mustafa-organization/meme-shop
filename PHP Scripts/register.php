@@ -10,8 +10,9 @@ $addressnumber=$_Post['addressnumber'];
 
 
 $dbc=mysqli_connect("localhost",'root','','memeShop');
-$sql = mysql_query("INSERT INTO Customers (CustomerName,Customerusername ,News, Addressname,Addressnumber ,Password)
-VALUES ('$fullname', '$registerusername', ,'$news' ,'$addressname','$addressnumber', '$registerpsw')");
+$query="INSERT INTO customers (CustomerName,Customerusername ,News, Addressname,Addressnumber ,pwd)
+VALUES ('$fullname', '$registerusername', ,'$news' ,'$addressname','$addressnumber', '$registerpsw')";
+$sql = mysqli_query($dbc,$query);
 
  mysqli_close($dbc);
  include '../HTML/index.html';

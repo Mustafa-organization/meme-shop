@@ -19,12 +19,12 @@
    <li id="logo-li"><img id ="logo"  src="logo.png"alt="logo"></li>
    <li id = "search"> 
   
-  <input id="kereses" type="text" name="valuetosearch" placeholder="keresés">
+  <input id="kereses" type="text" name="valuetosearch" placeholder="keresï¿½s">
  
   </li>
   
-     <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" >Bejelentkezés</button></li>
-	 <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id02').style.display='block'">Regisztráció</button> </li>
+     <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" >Bejelentkezï¿½s</button></li>
+	 <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id02').style.display='block'">Regisztrï¿½ciï¿½</button> </li>
 	<li  class="login-li"><button class="loginbutton">Kosar tartalma</button></li>
 
 
@@ -38,19 +38,19 @@
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/register.php">
+  <form class="modal-content animate" action="../PHP Scripts/login.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezárás">&times;</span>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezï¿½rï¿½s">&times;</span>
       <img src="login.png" alt="Avatar" class="avatar">
     </div>
 
     <div class="container">
       <label for="uname"><b>Felhasznalonev</b></label>
-      <input type="text" placeholder="Felhasználónév" name="uname" required>
+      <input type="text" placeholder="Felhasznï¿½lï¿½nï¿½v" name="uname" id="uname" required>
 	
 
       <label for="psw"><b>Jelszo</b></label>
-      <input type="password" placeholder="Jelszó" name="psw" required>
+      <input type="password" placeholder="Jelszï¿½" name="psw" id="psw" required>
         
       <button class="loginbutton"type="submit">Bejelentkezes</button>
 	 
@@ -59,7 +59,7 @@
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Mégsem</button>
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Mï¿½gsem</button>
       <span class="psw">Jelszo <a href="repassword.html">visszaallitas</a></span>
     </div>
   </form>
@@ -72,27 +72,27 @@
 
 <div id="id02" class="modal">
   
-  <form class="modal-content animate" action="/register.php">
+  <form class="modal-content animate" action="../PHP Scripts/register.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Bezárás">&times;</span>
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Bezï¿½rï¿½s">&times;</span>
       <img src="login.png" alt="Avatar" class="avatar">
 	</div>
 		<div class="container">
-		<label for="name"><b>Teljes név</b></label>
-		<input type="text" placeholder="teljes név" name="name" required>
+		<label for="name"><b>Teljes nï¿½v</b></label>
+		<input type="text" placeholder="teljes nï¿½v" name="name" required>
       <label for="uname"><b>Felhasznalonev</b></label>
-	  <input type="text" placeholder="Felhasználónév" name="nuname" required>
+	  <input type="text" placeholder="Felhasznï¿½lï¿½nï¿½v" name="nuname" required>
 		<label for="psw"><b>Jelszo</b></label>
-      <input type="password" placeholder="Jelszó" name="npsw" required>
+      <input type="password" placeholder="Jelszï¿½" name="npsw" required>
 	  	<label for="psw"><b>Jelszo megint</b></label>
-      <input type="password" placeholder="Jelszó" name="pswa" required>
-	  <label><input type="checkbox" checked="checked" name="news"><b>Hírlevél</b></label>
+      <input type="password" placeholder="Jelszï¿½" name="pswa" required>
+	  <label><input type="checkbox" checked="checked" name="news"><b>Hï¿½rlevï¿½l</b></label>
 	  <br>
-	  <label for="addressname"><b>Szállítási cím</b></label>
+	  <label for="addressname"><b>Szï¿½llï¿½tï¿½si cï¿½m</b></label>
 	  <input type="text" placeholder="Szallitasi cim" name="addressname" style="width:50%;" required>
-	  <input type="number" placeholder="Házszám" name="addressnumber" style="width:10%; height:9.5%"required>
+	  <input type="number" placeholder="Hï¿½zszï¿½m" name="addressnumber" style="width:10%; height:9.5%"required>
 		</div>
-	 <button class="loginbutton"type="submit">Regisztráció</button>
+	 <button class="loginbutton"type="submit">Regisztrï¿½ciï¿½</button>
 	 </div>
 
   </form>
@@ -133,10 +133,10 @@
 
 <ul class="vmenu">
 <form action="miket jelenitsen meg" method="elkudi a dolgokat">
-<li class="vmenuv"><a class="vmenut" href="#">Puskás polók</a></li>
-<li class="vmenuv"><a class="vmenut"  href="#">Dank-polók</a></li>
+<li class="vmenuv"><a class="vmenut" href="#">Puskï¿½s polï¿½k</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Dank-polï¿½k</a></li>
 <li class="vmenuv"><a class="vmenut"  href="#">Normie-farmer</a></li>
-<li class="vmenuv"><a class="vmenut"  href="#">Normie-polók</a></li>
+<li class="vmenuv"><a class="vmenut"  href="#">Normie-polï¿½k</a></li>
 </form>
 </ul>
 
@@ -151,19 +151,19 @@
 
 <div class = "hirlevel">
 
-<h2 id="hirlevelcim">Hírlevél</h2>
+<h2 id="hirlevelcim">Hï¿½rlevï¿½l</h2>
 
  <label for="email"><b>E-mail</b></label>
       <input type="text" placeholder="email" name="email" >
 
-	   <label for="név"><b>Név</b></label>
-      <input type="text" placeholder="név" name="név">
+	   <label for="nï¿½v"><b>Nï¿½v</b></label>
+      <input type="text" placeholder="nï¿½v" name="nï¿½v">
 </div>
 
 
 <ul class="hmenu">
 
-  <li class="hmenuv"><a class="hmenut" href="#home">Elérhetõségeink</a></li>
+  <li class="hmenuv"><a class="hmenut" href="#home">Elï¿½rhetï¿½sï¿½geink</a></li>
    <li class="hmenuv"><a class="hmenut" href="#home">facebook</a></li>
   <li class="hmenuv"><a class="hmenut" href="#news">instagram</a></li>
   <li class="hmenuv"><a class="hmenut" href="#contact">snapchat</a></li>

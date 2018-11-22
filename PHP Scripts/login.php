@@ -7,12 +7,13 @@ $basketcount=0;
 $dbc=mysqli_connect("localhost",'root','','memeShop');
 
 //check identity
-$query="Select * from felhasznalok where name='$name' AND pwd='$pwd'";
-mysqli_query($dbc, $query)
+$query="Select id from customers where Customerusername='$name' AND pwd='$pwd'";
+$nameID=mysqli_query($dbc, $query)
 or die ("nem megfelelõ jelszó vagy felhasználó név");
+// nem stringet ad vissza a mysqli_query();
 //check "kosar"
-$query="select name from kosar";
-$result =mysqli_query($dbc,$query)
+$query2="select productID from basket where nameID='$nameID'";
+$result =mysqli_query($dbc,$query2)
 or die("Error querying database");
 while(($row =mysqli_fetch_array($result))!=null)
 {
