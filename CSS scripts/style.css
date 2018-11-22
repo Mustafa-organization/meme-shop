@@ -1,7 +1,8 @@
 body {
-	position:fixed;
-	width:1900px;
+
 	
+	min-width: 1900px;
+	max-width:1900px;
 	
 }
 .fejlec {
