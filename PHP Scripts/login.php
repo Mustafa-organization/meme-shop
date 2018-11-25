@@ -1,18 +1,27 @@
 <?php
     $name=$_POST['uname'];
     $pwd=$_POST['psw'];
-    ///$remember=$_POST['remember'];
+    $remember=$_POST['remember']; //string  ha igaz =on , bool-ként true , ha nem igaz akkor false boolként!!!
     //GLOBAL $basketcount;
     $basketcount=0;
     $fullname="";
     //connect to sql server
+    error_reporting(E_ERROR | E_PARSE);    
+    try{
     $dbc=mysqli_connect("localhost",'root','','memeShop');
-    
+    }catch(Exception $ex)
+    {
+        include '../HTML/error.html';
+    }
     //check identity
     //ID lekérdezés
     $query="Select id from customers where Customerusername='$name' AND pwd='$pwd'";
-    $result=mysqli_query($dbc, $query)
-        or die ();
+    try{
+    $result=mysqli_query($dbc, $query);
+    }catch(Exception $ex)
+    {
+        include '../HTML/error.html';
+    }
     $nameID=mysqli_fetch_array($result);
     //ID lekérdezés vége
     
