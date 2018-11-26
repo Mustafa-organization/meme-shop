@@ -6,12 +6,12 @@ $registerpswa=$_POST['pswa'];
 $news=$_POST['news'];
 $addressname=$_POST['addressname'];
 $addressnumber=$_POST['addressnumber'];
- //// EMAIL ADDRESS!!!!
+$mail=$_POST['mail'];
 
 
 $dbc=mysqli_connect("localhost",'root','','memeShop');
-$query="INSERT INTO customers (CustomerName,Customerusername ,News, Addressname,Addressnumber ,pwd)
-VALUES ('$fullname', '$registeruname' ,'$news' ,'$addressname','$addressnumber', '$registerpsw')";
+$query="INSERT INTO customers (CustomerName,Customerusername ,News, Addressname,Addressnumber ,pwd,E-mail)
+VALUES ('$fullname', '$registeruname' ,'$news' ,'$addressname','$addressnumber', '$registerpsw', '$mail')";
 $sql = mysqli_query($dbc,$query);
 
  mysqli_close($dbc);

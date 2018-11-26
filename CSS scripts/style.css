@@ -15,24 +15,25 @@ body {
 	list-style-type: none;
     margin: 0;
     overflow: hidden;
-   width: 200%;
+   width: 80%;
 	padding-left: 25%;
 }
 .login-li {
 	
 	float: left;
-	width : 5%;
+	width : 13%;
 	padding-right:0.3%;
-	padding-top: 0.1%;
+	padding-top: 2.7%;
 	margin:0%;
+	
 	
 }
 #search {
 	margin: 0%;
 	float:left;
-	width:5%;
-	padding-right:3%;
-	padding-top:0.3%;
+	width:13%;
+	padding-right:6.8%;
+	padding-top:3%;
 	padding-left:0%;
 }
 
@@ -48,7 +49,7 @@ padding-top: 0.1%;
 #logo-li{
 	
 	float: left;
-	width:3%;
+	width:13%;
 	padding-right:0%;
 	margin: 0%;
 	padding-top: 0.28%;
@@ -202,7 +203,8 @@ button.cancelbtn:hover {
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #333;
+	color:white;
 }
 
 /* Center the image and position the close button */
@@ -310,5 +312,28 @@ text-align: center;
 border: 0%;
 	color: white;
 	
+}
+
+.contact {
+	
+	margin-top:0%;
+	padding-top:5%;
+	
+}
+#signup {
+	 background-color: black;
+    color: white;
+	
+    padding: 14px 20px;
+	
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+	border-radius: 25px;
+	margin-left: 115px;
+}
+button#signup:hover {
+	opacity: 0.8;
 }
 

@@ -14,7 +14,7 @@
 			   <li id = "search">		  
 			   	<input id="kereses" type="text" name="valuetosearch" placeholder="kereses">		 
 			   </li>		  
-			   <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id01').style.display='block'" >Bejelentkezes</button></li>
+			   <li class="login-li"><button class="loginbutton"  onclick="document.getElementById('id01').style.display='block'" >Bejelentkezes</button></li>
 			   <li class="login-li"><button class="loginbutton" onclick="document.getElementById('id02').style.display='block'">Regisztracio</button></li>			  
 			   <li class="login-li"><button class="loginbutton" onclick="../HTML/basket.html">Kosar tartalma</button></li>			   
 			  </ul>
@@ -48,7 +48,9 @@
 				</div>
 				<div class="container">
 					<label for="name"><b>Teljes nev</b></label>
-					<input type="text" placeholder="teljes nev" name="name" required>
+					<input type="text" placeholder="Teljes nev" name="name" required>
+					<label for="mail"><b>E-mail<b></label>
+					<input type="text" placeholder="E-mail" name="mail" required>
 				    <label for="uname"><b>Felhasznalonev</b></label>
 					<input type="text" placeholder="Felhasznalonev" name="nuname" required>
 					<label for="psw"><b>Jelszo</b></label>
@@ -58,10 +60,10 @@
 					<label><input type="checkbox" checked="checked" name="news"><b>Hirlevel</b></label>
 					<br>
 					<label for="addressname"><b>Szallitasi cim</b></label>
-					<input type="text" placeholder="Szallitasi cim (város,utca)" name="addressname" style="width:50%;" required>
+					<input type="text" placeholder="Város,utca" name="addressname" style="width:50%;" required>
 					<input type="number" placeholder="Hazszam" name="addressnumber" style="width:10%; height:9.5%"required>
 				</div>
-				 <button class="loginbutton"type="submit">Regisztracio</button>
+				 <button class="loginbutton" type="submit">Regisztracio</button>
 				</form>
 			</div>
 			<ul class="hmenu">		
@@ -99,17 +101,21 @@
 			<div class = "hirlevel">		
 				<h2 id="hirlevelcim">Hirlevel</h2>		
 				<label for="email"><b>E-mail</b></label>
-				<input type="text" placeholder="email" name="email" >
+				<input type="text" placeholder="email" name="smail" >
 				<label for="n�v"><b>Nev</b></label>
-				<input type="text" placeholder="nev" name="nev">
+				<input type="text" placeholder="név" name="name">
+				<form action="../PHP Scripts/signup.php" method="post">
+				<button id="signup" name="signup">Feliratkozás</button>
+				</form>
 			</div>		
-			
+			<div class="contact">
 			<ul class="hmenu">		
 			  <li class="hmenuv"><a class="hmenut" href="#home">Elerhetosegeink</a></li>
 			  <li class="hmenuv"><a class="hmenut" href="#home">facebook</a></li>
 			  <li class="hmenuv"><a class="hmenut" href="#news">instagram</a></li>
 			  <li class="hmenuv"><a class="hmenut" href="#contact">snapchat</a></li>		  
-			</ul>		
+			</ul>
+				</div>
 		</div >
 		<script>
 			var slideIndex = 0;
