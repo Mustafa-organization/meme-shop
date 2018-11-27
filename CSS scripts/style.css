@@ -92,7 +92,7 @@ ul.hmenu {
 }
 
 li.hmenuv {
-    float: left;
+    float:left;
 }
 
 li a.hmenut:hover {
@@ -120,8 +120,9 @@ ul.vmenu {
     padding: 0;
     width: 8.7%;
     background-color: #333;
-	overflow: hidden;
+	overflow:hidden;
 }
+
 a.vmenut {
 	
 	display: block;
@@ -335,5 +336,41 @@ border: 0%;
 }
 button#signup:hover {
 	opacity: 0.8;
+}
+
+#payment {
+	
+	list-style-type:none;
+	background-color:#333;
+	width:15%;
+	float:right;
+	padding-top:0.5%;
+	margin:0%;
+	margin-top:1%;
+	padding-left:1%;
+	padding-right:2%;
+	color:white;
+	height:110px;
+	font-size: 100%;
+	
+}
+.basket-ul {
+	padding-top:1%;
+	list-style-type: none;
+	padding-left:0%;
+	float:right;
+	margin:0%;
+	padding-right:45%;
+}
+.basket-li {
+	padding-left:5%;
+	float:right;
+	padding-right:5%;
+	padding-top:10%;
+	
+}
+.basket-img {
+	width:75%;
+	padding-right:1%;
 }
 
