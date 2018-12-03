@@ -123,16 +123,20 @@ ul.vmenu {
 	overflow:hidden;
 }
 
-a.vmenut {
+button.vmenut {
 	
 	display: block;
 	color: white;
-
+	background-color:#333;
+	margin:0px;
+	border:0px;
+	border:0px;
     padding: 14px 16px;
     text-decoration: none;
+	
 }
 
-li a.vmenut:hover {
+li button.vmenut:hover {
 	
 	background-color: #111;
 	
@@ -350,7 +354,7 @@ button#signup:hover {
 	padding-left:1%;
 	padding-right:2%;
 	color:white;
-	height:110px;
+	height:150px;
 	font-size: 100%;
 	
 }
@@ -374,3 +378,13 @@ button#signup:hover {
 	padding-right:1%;
 }
 
+.buybtn {
+	
+	background-color:red;
+	border:0px;
+	border-radius:25px;
+	padding: 10px 25px;
+	margin-top:10px;
+	color:white;
+	
+}
