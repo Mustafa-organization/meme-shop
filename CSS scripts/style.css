@@ -116,11 +116,12 @@ li a.hmenut:hover {
 }
 ul.vmenu {
     list-style-type: none;
-    margin-top: 1%;
+    margin-top: 0.8%;
     padding: 0;
     width: 8.7%;
     background-color: #333;
 	overflow:hidden;
+	position:fixed;
 }
 
 button.vmenut {
@@ -131,9 +132,9 @@ button.vmenut {
 	margin:0px;
 	border:0px;
 	border:0px;
-    padding: 14px 16px;
+    padding: 16px 20px;
     text-decoration: none;
-	
+
 }
 
 li button.vmenut:hover {
@@ -357,24 +358,28 @@ button#signup:hover {
 	height:150px;
 	font-size: 100%;
 	
+	
 }
 .basket-ul {
 	padding-top:1%;
 	list-style-type: none;
 	padding-left:0%;
-	float:right;
+	float:left;
 	margin:0%;
-	padding-right:45%;
+	padding-left:15%;
+	width:800px;
+	
+	
 }
 .basket-li {
-	padding-left:5%;
+	padding-left:3%;
 	float:right;
 	padding-right:5%;
 	padding-top:10%;
-	
+
 }
 .basket-img {
-	width:75%;
+	width:50%;
 	padding-right:1%;
 }
 
