@@ -1,0 +1,28 @@
+create database memeshop;
+use memeshop;
+
+
+
+create table customers (CustomerName VARCHAR(24),
+Customerusername VARCHAR(24),
+News int(2),
+Addressname VARCHAR(64),
+Addressnumber VARCHAR(32),
+pwd VARCHAR(16));
+alter table customers add id int not null auto_increment FIRST,
+add primary key (id);
+
+create table product (productName varchar(24),
+price int(64),
+color VARCHAR(16),
+Asize VARCHAR(10),
+sex int(2),
+location varchar(64)
+);
+alter table product add productID int not null auto_increment FIRST,
+add primary key (productID);
+
+create table basket (productID int,
+nameID int,
+quantity int
+);
