@@ -22,7 +22,7 @@ try{
     }
 	$ProductsIDS=mysqli_fetch_array($result);
 	
-	 // Küldje vissza azokat az Id-ket ami a szűrt keresés eredménye!
+	$result = mysqli_query($dbc,$query);
 	 
 	  if($ProductsIDS==null)
          {                       
@@ -30,7 +30,7 @@ try{
             $GLOBALS['logined']=false;
          }else{           
              
-             
+             $GLOBALS['filter'] = $result;
              $GLOBALS['fullname']=$fullname[0];
              $GLOBALS['basketcount']=$basketcount;
              

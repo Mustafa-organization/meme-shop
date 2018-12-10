@@ -14,6 +14,9 @@ $query="INSERT INTO customers (CustomerName,Customerusername ,News, Addressname,
 VALUES ('$fullname', '$registeruname' ,'$news' ,'$addressname','$addressnumber', '$registerpsw', '$mail')";
 $sql = mysqli_query($dbc,$query);
 
+
+
+
  mysqli_close($dbc);
  include '../HTML/index.html';
  ?>

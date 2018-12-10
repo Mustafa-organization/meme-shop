@@ -1,3 +1,9 @@
+<?php 
+session_start();
+$dbc=mysqli_connect("localhost",'root','','memeShop');
+
+
+?>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../CSS scripts/style.css">
@@ -91,12 +97,13 @@
 			  <li class="hmenuv"><a class="hmenut" href="#about">Blog</a></li>			
 			</ul>
 			<ul class="vmenu" style="position:fixed;">
-				<form action="miket jelenitsen meg" method="elkudi a dolgokat">
-				<li class="vmenuv"><button class="vmenut" href="#">Puskas polok</button></li>
-				<li class="vmenuv"><button class="vmenut"  href="#">Dank-polok</button></li>
-				<li class="vmenuv"><button class="vmenut"  href="#">Normie-farmer</button></li>
-				<li class="vmenuv"><button class="vmenut"  href="#">Normie-polok</button></li>
+				<form action="../PHP Scripts/select.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="PuskasTbtn" href="#">Puskas polok</button></li>
+				<li class="vmenuv"><button class="vmenut" id="DankTbtn"  href="#">Dank-polok</button></li>
+				<li class="vmenuv"><button class="vmenut" id="NormieJbtn"  href="#">Normie-farmer</button></li>
+				<li class="vmenuv"><button class="vmenut" id="NormieTbtn" href="#">Normie-polok</button></li>
 			</form>
+			</ul>		
 			</ul>
 			</div>
 			
