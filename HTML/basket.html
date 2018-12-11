@@ -7,7 +7,8 @@
 		<title>Memes-shop</title>
 	</head>
 	<body>
-		<?php if($GLOBALS['logined']==false){?>
+		<?php if($GLOBALS['logined']==false){
+			?>
 			<div class="fejlec">	
 				<ul id="login-ul">		
 				   <li id="logo-li"><img id ="logo"  src="logo.png"alt="logo"></li>
@@ -24,8 +25,7 @@
 					  <form class="modal-content animate" action="../PHP Scripts/login.php" method="post">
 					    <div class="imgcontainer">
 					      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezaras">&times;</span>
-					      <img src="login.png" alt="Avatar" class="avatar">
-					    </div>			
+					      <img src="login.png" alt="Avatar" class="avatar"></div>
 					    <div class="container">
 					      <label for="uname"><b>Felhasznalonev</b></label>
 					      <input type="text" placeholder="Felhasznalonev" name="uname" id="uname" required>			
@@ -64,7 +64,8 @@
 					 <button class="loginbutton"type="submit">Regisztracio</button>
 					</form>
 				 </div>
-			 <?php }else {?>
+			 <?php }
+					else {?>
 				<div class="fejlec">		
 					<ul id="login-ul">		
 				   <li id="logo-li"><img id ="logo" src="../HTML/logo.png"alt="logo"></li>
