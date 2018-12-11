@@ -1,9 +1,6 @@
 <?php
 
-$PuskasT =$_POST['PuskasTbtn'];
-$DankT =$_POST['DankTbtn'];
-$NormieJ =$_POST['NormieJbtn'];
-$NormieT =$_POST['NormieTbtn'];
+$selected = $_Post['filter']
 
 $dbc=mysqli_connect("localhost",'root','','memeShop');
 error_reporting(E_ERROR | E_PARSE);    
@@ -13,7 +10,7 @@ error_reporting(E_ERROR | E_PARSE);
     {
         include '../HTML/error.html';
     }
-	 $query="Select productID  from Product where Productfilter ='$PuskasT' OR Productfilter ='$DankT' OR Productfilter ='$NormieJ' OR Productfilter ='$NormieT'";
+	 $query="Select productID  from Product where Productfilter ='$selected'";
 try{
     $ProductsIDS=mysqli_query($dbc, $query);
     }catch(Exception $ex)
@@ -30,7 +27,7 @@ try{
             $GLOBALS['logined']=false;
          }else{           
              
-             $GLOBALS['filter'] = $result;
+             $GLOBALS['selected'] = $result;
              $GLOBALS['fullname']=$fullname[0];
              $GLOBALS['basketcount']=$basketcount;
              

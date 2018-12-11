@@ -98,13 +98,49 @@ $dbc=mysqli_connect("localhost",'root','','memeShop');
 			</ul>
 			<ul class="vmenu" style="position:fixed;">
 				<form action="../PHP Scripts/select.php" method="post">
-				<li class="vmenuv"><button class="vmenut" id="PuskasTbtn" href="#">Puskas polok</button></li>
-				<li class="vmenuv"><button class="vmenut" id="DankTbtn"  href="#">Dank-polok</button></li>
-				<li class="vmenuv"><button class="vmenut" id="NormieJbtn"  href="#">Normie-farmer</button></li>
-				<li class="vmenuv"><button class="vmenut" id="NormieTbtn" href="#">Normie-polok</button></li>
-			</form>
+				<li class="vmenuv"><button class="vmenut" id="PuskasTbtn" name="filter" href="#">Puskas polok</button></li>
+				</form>
+				<form action="../PHP Scripts/select.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="DankTbtn"  name="filter" href="#">Dank-polok</button></li>
+				</form>
+				<form action="../PHP Scripts/select.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="NormieJbtn" name="filter" href="#">Normie-farmer</button></li>
+				</form>
+				<form action="../PHP Scripts/select.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="NormieTbtn" name="filter"  href="#">Normie-polok</button></li>
+				</form>
 			</ul>		
-			</ul>
+			
+			<?php
+					
+					if($GLOBALS['selected'] == null){
+					
+					  echo "A kereses sajnos nem sikerult";
+					  
+					}
+					
+					if(mysqli_num_rows($GLOBALS['selected']) > 0){
+					
+					while($row = mysqli_fetch_array($GLOBALS['selected'])){
+					?>
+					
+					<form action="../PHP Scripts/basket.php" method="post">
+					<div class="products">
+					<img src="<?php echo $row["location"]; ?>" alt="<?php echo $row["productName"]; ?>" >
+					<h3><?php echo $row["Asize"]; ?><h3>
+					<h3><?php echo $row["color"]; ?><h3>
+					<h3><?php echo $row["sex"]; ?><h3>
+					<h3><?php echo $row["price"]; ?>Ft<h3>
+					<input type="number" placeholder="Mennyiség" min="0" max="10" required>
+					<input type="submit" name="add" value="kosárba">
+					</form>
+					</div>
+					<?php
+					}
+					}
+					?>
+					
+					
 			</div>
 			
 </body>
