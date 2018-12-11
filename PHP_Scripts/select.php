@@ -1,9 +1,9 @@
 <?php
 
-$selected = $_Post['filter']
-
-$dbc=mysqli_connect("localhost",'root','','memeShop');
-error_reporting(E_ERROR | E_PARSE);    
+    $selected = $_POST['filter'];
+    //echo "innen hianyzik valami: ".$selected;   
+    //$dbc=mysqli_connect("localhost",'root','','memeShop');
+    //error_reporting(E_ERROR | E_PARSE);     //kivettem mert így legalább írja a hibákat
     try{
     $dbc=mysqli_connect("localhost",'root','','memeShop');
     }catch(Exception $ex)
@@ -11,8 +11,9 @@ error_reporting(E_ERROR | E_PARSE);
         include '../HTML/error.html';
     }
 	 $query="Select productID  from Product where Productfilter ='$selected'";
-try{
-    $ProductsIDS=mysqli_query($dbc, $query);
+    try{
+       // $ProductsIDS=mysqli_query($dbc, $query);
+        $result=mysqli_query($dbc, $query); //szerintem inkább ez kéne
     }catch(Exception $ex)
     {
         include '../HTML/error.html';
@@ -24,16 +25,8 @@ try{
 	  if($ProductsIDS==null)
          {                       
             include '../HTML/error.html';
-            $GLOBALS['logined']=false;
-         }else{           
-             
+         }else{             
              $GLOBALS['selected'] = $result;
-             $GLOBALS['fullname']=$fullname[0];
-             $GLOBALS['basketcount']=$basketcount;
-             
-             $GLOBALS['logined']=true;
              include '../HTML/filteredsearch.html';
-         }
-	 
-	 
-	 ?>
+         }         
+?>

@@ -9,7 +9,7 @@ $addressnumber=$_POST['addressnumber'];
 $mail=$_POST['mail'];
 
 
-$dbc=mysqli_connect("localhost",'root','','memeshop');
+$dbc=mysqli_connect("localhost",'root','','memeShop');
 /*if(!$dbc)
 {
 	die();
