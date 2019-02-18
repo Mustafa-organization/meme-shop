@@ -1,12 +1,5 @@
 <?php 
-session_start();
-try{
     $dbc=mysqli_connect("localhost",'root','','memeShop');
-    }catch(Exception $ex)
-    {
-        include '../HTML/error.html';
-    }
-
 ?>
 <html>
 <head>
@@ -21,7 +14,7 @@ try{
 <?php if($GLOBALS['logined']==false){?>
 			<div class="fejlec">	
 				<ul id="login-ul">		
-				   <li id="logo-li"><img id ="logo"  src="logo.png"alt="logo"></li>
+				   <li id="logo-li"><img id ="logo"  src="../HTML/logo.png"alt="logo"></li>
 				   <li id = "search">		  
 				   	<input id="kereses" type="text" name="valuetosearch" placeholder="kereses">		 
 				   </li>		  
@@ -35,7 +28,7 @@ try{
 					  <form class="modal-content animate" action="../PHP Scripts/login.php" method="post">
 					    <div class="imgcontainer">
 					      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Bezaras">&times;</span>
-					      <img src="login.png" alt="Avatar" class="avatar">
+					      <img src="../HTML/login.png" alt="Avatar" class="avatar">
 					    </div>			
 					    <div class="container">
 					      <label for="uname"><b>Felhasznalonev</b></label>
@@ -55,7 +48,7 @@ try{
 				  <form class="modal-content animate" action="../PHP Scripts/register.php" method="post">
 				    <div class="imgcontainer">
 				      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Bezaras">&times;</span>
-				      <img src="login.png" alt="Avatar" class="avatar">
+				      <img src="../HTML/login.png" alt="Avatar" class="avatar">
 					</div>
 					<div class="container">
 						<label for="name"><b>Teljes nev</b></label>
@@ -93,7 +86,7 @@ try{
 			 <div class="content">
 			 
 			 <ul class="hmenu">		
-			  <li class="hmenuv"><a class="hmenut" href="index.html">Kezdolap</a></li>
+			  <li class="hmenuv"><a class="hmenut" href="../HTML/index.html">Kezdolap</a></li>
 			  <li class="hmenuv"><a class="hmenut" href="#about">A het ajanlatai</a></li>
 			  <li class="hmenuv"><a class="hmenut" href="#news">Szallitas</a></li>
 			  <li class="hmenuv"><a class="hmenut" href="#contact">Tortenetunk</a></li>
@@ -101,9 +94,25 @@ try{
 			  <li class="hmenuv"><a class="hmenut" href="#about">Blog</a></li>			
 			</ul>
 			
+			<ul class="vmenu">
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut" value="PuskasTbtn" name="filter" href="#">Puskas polok</button></li>
+				</form>
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut" value="DankTbtn" name="filter" href="#">Dank-polok</button></li>
+				</form>
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut" value="NormieJbtn"name="filter" href="#">Normie-farmer</button></li>
+				</form>
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut"  value="NormieTbtn"name="filter"  href="#">Normie-polok</button></li>
+				</form>
+			</ul>		
 			
 			<?php
-					$query= "Select * FROM tbl_product WHERE Productfilter='PuskasTbtn' ";
+			
+			$search = $_POST['valuetosearch'];
+					$query= "Select * FROM product WHERE productName='$search' ";
 					$result = mysqli_query($dbc,$query);
 					
 					
@@ -111,19 +120,26 @@ try{
 					
 					while($row = mysqli_fetch_array($result))
 					{
+						
 					?>
 					
+					<form action="basket.php" method="post">
 					
-					<form action=".../HTML/selected.php">
-					<input><img src="<?php echo $row["location"]; ?>" alt="<?php echo $row["productName"]; ?>"></input>
-					<form>
+					<img  src="<?php echo $row["location"]; ?>" style="float:<script></script>" width="25%" alt="<?php echo $row["productName"]; ?>" >
 					
+					<h3><?php echo $row["size"]; ?></h3>
+					<h3><?php echo $row["color"]; ?></h3>
+					<h3><?php echo $row["sex"]; ?></h3>
+					<h3><?php echo $row["price"]; ?>Ft</h3>
+					
+					<input type="submit" name="add" value="Kosárba">
+					</form>
 					
 					<?php
-						}
 					
-					?>					 
+					}
+					?>
+	
+						
 					
-		<script>
 		
-		</script>

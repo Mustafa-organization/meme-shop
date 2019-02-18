@@ -59,7 +59,7 @@
 						<br>
 						<label for="addressname"><b>Szallitasi cim</b></label>
 						<input type="text" placeholder="Szallitasi cim (város,utca)" name="addressname" style="width:50%;" required>
-						<input type="number" placeholder="Hazszam" name="addressnumber" style="width:10%; height:9.5%"required>
+						<input type="number" placeholder="Hazszam" name="addressnumber" min="0" style="width:10%; height:9.5%" required>
 					</div>
 					 <button class="loginbutton"type="submit">Regisztracio</button>
 					</form>
@@ -156,12 +156,20 @@
 					
 			 
 			<ul class="vmenu" style="position:fixed;">
-				<form action="miket jelenitsen meg" method="elkudi a dolgokat">
-				<li class="vmenuv"><button class="vmenut" href="#">Puskas polok</button></li>
-				<li class="vmenuv"><button class="vmenut"  href="#">Dank-polok</button></li>
-				<li class="vmenuv"><button class="vmenut"  href="#">Normie-farmer</button></li>
-				<li class="vmenuv"><button class="vmenut"  href="#">Normie-polok</button></li>
-			</form>
+				
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="PuskasTbtn" name="filter" href="#">Puskas polok</button></li>
+				</form>
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="DankTbtn"  name="filter" href="#">Dank-polok</button></li>
+				</form>
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="NormieJbtn" name="filter" href="#">Normie-farmer</button></li>
+				</form>
+				<form action="../PHP_Scripts/filteredsearch.php" method="post">
+				<li class="vmenuv"><button class="vmenut" id="NormieTbtn" name="filter"  href="#">Normie-polok</button></li>
+				</form>
+					
 			</ul>
 			
 			
